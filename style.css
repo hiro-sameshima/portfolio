@@ -1,6 +1,6 @@
 body {
   color: blueviolet h1;
-  color: blue;
+  color-color: blue;
 }
 
 body p {
@@ -9,5 +9,6 @@ body p {
 
 body .hoge {
   font-size: 16px;
+  color: darkolivegreen;
 }
 /*# sourceMappingURL=style.css.map */
