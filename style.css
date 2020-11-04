@@ -1,13 +1,12 @@
-body {
-  color: blueviolet h1;
-  color-color: blue;
+div h1 {
+  color: blue;
 }
 
-body p {
+div p {
   color: darkblue;
 }
 
-body .hoge {
+div .hoge {
   font-size: 16px;
   color: darkolivegreen;
 }
