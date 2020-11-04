@@ -1,5 +1,13 @@
-html {
-  color: blueviolet p;
+body {
+  color: blueviolet h1;
   color: blue;
+}
+
+body p {
+  color: darkblue;
+}
+
+body .hoge {
+  font-size: 16px;
 }
 /*# sourceMappingURL=style.css.map */
