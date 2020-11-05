@@ -1,13 +1,64 @@
-div h1 {
-  color: blue;
+body {
+  background-color: #fff;
+  font-family: 'Lato', sans-serif;
 }
 
-div p {
-  color: darkblue;
+.header {
+  width: 960px;
+  height: 270px;
+  margin: 0 332px;
 }
 
-div .hoge {
-  font-size: 16px;
-  color: darkolivegreen;
+.header .box {
+  width: 960px;
+  height: 160px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+.header .box img {
+  width: 180px;
+  height: 64px;
+}
+
+.header .box i {
+  margin: 0 16px;
+  font-size: 24px;
+  color: #333;
+}
+
+.header .under-box {
+  width: 960px;
+  height: 110px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+.header .under-box .menu-list {
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.header .under-box .menu-list li {
+  margin: 16px;
 }
 /*# sourceMappingURL=style.css.map */

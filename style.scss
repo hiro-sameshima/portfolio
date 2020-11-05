@@ -1,13 +1,46 @@
-div {
-  h1 {
-    color: blue;
+body{
+  background-color: #fff;
+  font-family: 'Lato', sans-serif;
+}
+// ヘッダー部分
+.header {
+  width: 960px;
+  height: 270px;
+  margin: 0 332px;
+
+  .box {
+    width: 960px;
+    height: 160px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+
+    img {
+      width: 180px;
+      height: 64px;
+    }
+    i {
+      margin: 0 16px;
+      font-size: 24px;
+      color: #333;
+    }
   }
-  p {
-    color: darkblue;
-  }
-  .hoge {
-    font-size: 16px;
-    color: darkolivegreen;
+    .under-box {
+      width: 960px;
+      height: 110px;
+      display: flex;
+      justify-content: flex-end;
+      align-items: flex-end;
+
+      .menu-list {
+        list-style: none;
+        display: flex;
+        justify-content: flex-end;
+        
+
+        li {
+          margin: 16px;
+        }
+      }
   }
 }
-
