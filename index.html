@@ -5,9 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
   <link href="https://fonts.googleapis.com/css?family=Noto+Sans+JP:100,500,900&amp;subset=japanese" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Sawarabi+Mincho" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
   <link rel='stylesheet' href='https://unpkg.com/ress/dist/ress.min.css'>
   <link rel="stylesheet" href="style.css">
+  <script src="https://code.jquery.com/jquery-3.0.0.min.js"></script>
   <title>portfolio</title>
 </head>
 <body>
@@ -16,22 +18,264 @@
     <div class="box">
       <img src="image/header-logo.png" class="" alt="Responsive image">
       <div class="icon-box">
-        <i class="fab fa-twitter"></i>
-        <i class="fab fa-instagram"></i>
+  
       </div>
     </div>
     <div class="under-box">
       <ul class="menu-list">
-        <li class="list">About</li>
-        <li class="list">Skills</li>
-        <li class="list">Portfolio</li>
+        <li class="list goSection"><a href="#first"></a> About</li>
+        <li class="list goSection">Skills</li>
+        <li class="list goSection">Portfolio</li>
       </ul>
     </div>
   </header>
 
+  <!-- top move btn -->
+  <p id="page-top"><a href="#wrap">PAGE TOP</a></p>
+
   <!-- top section -->
+  <div class="top-section">
+    <img src="image/top.jpg" alt="">
+    <p class="p" id="p1">Welcome</p>
+    <p class="p" id="p2">Sameshima</p>
+    <p class="p" id="p3">Portfolio Site</p>
+  </div>
+
+  <!-- about section -->
+  <div class="about" id="first">
+    <div class="about-text fade-in">
+      <h2 class="title" id="box">About Me</h2>
+    </div>
+    <div class="introduction-box">
+      <div class="introduction-box">
+        <div class="about-image fade-in">
+          <img src="image/my-img.png" alt="">
+        </div>
+      </div>
+      <div class="fade-in introduction">
+        <h4 class="title">Profile</h4>
+        <p>Hiroaki Sameshima</p>
+        <h5>鮫島 広朗</h5>
+        <p>
+          <br> はじめまして、鮫島 広朗と申します。
+          <br> 東京都内在住(出身：鹿児島県)
+          <br> 1984年生まれ 36歳
+          フラワー業界でデザインを中心に２社経験し、
+          ITエンジニアの夢を捨てきれず退職し鹿児島から上京しました。
+          コツコツと継続するのが好きです。
+          <br>現在学習を継続しながら転職活動を行っています。
+        </p>
+      </div>
+      <div>
+        
+      </div>
+    </div>
+    
+    <!-- 詳しいプロフィール -->
+    <div class="same-content">
+      <a class="same-js-modal-open btn" href="">もっと詳しく</a>
+    </div>
+    <div class="same-modal same-js-modal">
+      <div class="same-modal__bg same-js-modal-close"></div><!--背景クリックでも解除できる-->
+      <div class="same-modal__content box1">
+        <div class="app-int">
+          <h4 class="app-title">なぜこの業界で働きたいのか</h4>
+          <h4 class="app-sub-title"></h4>
+          <p>
+            <br> 根底にあるのはゲームばっかりプレイしていた10代。メジャーなタイトルよりもコアなタイトルに惹かれました。
+            <br> パネキットやアーマード・コア、ブレイズアンドブレイドなど朝から朝までプレイしていました。
+            フラワー業界に縁があり1社目の宮原生花さんへ入社。右も左も分からず、カッコいい先輩たちの背中を見ながら仕事に打ち込み、お葬儀の装花デザインを中心に8年間経験。
+            しかしお葬儀の装花以外は全く素人だった自分へのコンプレックスが捨てきれず、退社し２社目ベルキャンバス鹿児島さんの生花事業へ入社し更に８年を経験。朝から晩までお花と向き合い、ブライダルや小売販売、講師など様々な業務を経験します。
+            <br>フラワー業界で完全な一人前になったものの独立する気はなく、向上心だけがふらついていた。そこで転機が。
+            <br>業務での自社ホームページ運営や、とある北海道の出張先でPhotoShop、Illustratorを触り急激にのめり込み、「そうだ、Macを買おう」と思い立ち購入。
+            <br>独学でHTML&CSS,JavaScriptを勉強し決意。「絶対この業界で働きたい!!」
+            <br>妻を説得し一緒に鹿児島から上京しました。
+          </p>
+          <h4 class="app-title">自分の強みはなにか</h4>
+          <h4 class="app-sub-title">負けず嫌いと努力量</h4>
+          <p>
+            前職へ入社した時もそうでしたが、すでに自分より何倍も優れたライバル企業２社が葬儀部門においてシェア率を独占しており、当時全く相手にされませんでした。
+            <br>負けず嫌いな私は、そこでまず最も優れた1社を徹底的に分析しました。
+            <br>具体的には暇を見てはライバル企業を見学し作業工程を全て録画し把握、業務の終わる夜間から自主的に訓練し、２年で遜色ない技術を習得しました。
+            <br>その間も粘り強く営業を続け、アピールすることで徐々にシェア率を伸ばし、入社3年目にはシェア率を60%まで引き上げました。
+            <br>力の差にも諦めず、目標を持ち努力できる。これが私の強みです。
+          </p>
+          <h4 class="app-title">どんなエンジニアになりたのか</h4>
+          <p>
+
+            私には、「設計の段階からプロジェクトに携われるエンジニアになる」という目標があります。コーディングだけをするのではなく、使用するお客様が使いやすく喜んでもらうための制作をしたいからです。
+            　そのためには今の自分に慢心せず、常に新たな技術にキャッチアップし続け成長することが重要だと感じています。
+            <br>私は今年36歳になります。
+
+            30代で未経験の業界、特に技術職であるエンジニアに転職をするということは、難しいという認識でいます。
+            危機感を感じつつも「楽しい」と感じながら、日々プログラミング学習に向き合っています。
+            
+            就職後も継続して平日の夜や休日にもプログラミング学習を行い、技術へのキャッチアップに取り組み続けることをお約束いたします。
+          </p>
+          <h4 class="app-title">趣味</h4>
+          <p class="app-sub-title">カメラ、ランニング、映画</p>
+          <p>
+            フルサイズ一眼レフでのポートレート撮影。カメラを持ち歩くのが好きでよくスナップ撮影しています。少し型遅れですがEOS6Dをメインで使っています。
+            <br>ランニングは週３回程、1回30分程ですが1年ほど継続しています
+            <br>映画はジャンル問わず週に2~3本程ジャンル問わず鑑賞しています。最近のお気に入りは「セッション」「２つ星の料理人」など職人気質なものに共感してしまいます。
+          </p>
+          <p class="app-sub-title"></p>
+          <p class="app-sub-title"></p>
+          <a class="same-js-modal-close" href="">閉じる</a>
+        </div>
+        <div class="imgbox">
+          <img src="image/hiro.png" alt="">
+        </div>
+      </div>
+    </div><!--modal-->
+
+  </div>
+<div>
+    <!-- SkillSet section -->
+    <div class="fade-side-in skill-section">
+      <div class="title-box">
+        <h2 class="title box">
+          Skill Set
+        </h2>
+        <p>学習を経て身についたスキルです</p>
+      </div>
+      <h2 class="sub-title">
+          Front End
+      </h2>
+      <div class="wrapper">
+        <div class="bar">
+          <div class="bar-info html" data-total="60">
+            HTML/CSS/SCSS
+            <span class="percent">60</span>
+          </div>
+        </div>
+    
+        <div class="bar">
+          <div class="bar-info scss" data-total="50">
+            JavaScript
+            <span class="percent">50</span>
+          </div>
+        </div>
+    
+        <div class="bar">
+          <div class="bar-info js" data-total="23">
+            jquery
+            <span class="percent">23</span>
+          </div>
+        </div>
+        
+        <div class="bar">
+          <div class="bar-info ps" data-total="18">
+            Vue.js
+            <span class="percent">18</span>
+          </div>
+        </div>
+      </div>
+      
+      <!-- SkillSet section back end-->
+      <h2 class="sub-title">
+        Back End
+      </h2>
+      <div class="wrapper">
+        <div class="bar">
+          <div class="bar-info ruby" data-total="54">
+            Ruby/Ruby on Rails
+            <span class="percent">54</span>
+          </div>
+        </div>
+        
+        <div class="bar">
+          <div class="bar-info MySQL" data-total="30">
+            MySQL
+            <span class="percent">50</span>
+          </div>
+        </div>
+        
+        <div class="bar">
+          <div class="bar-info Nginx" data-total="12">
+            Nginx
+            <span class="percent">12</span>
+          </div>
+        </div>
+        
+        <div class="bar">
+          <div class="bar-info AWS" data-total="18">
+            AWS
+            <span class="percent">18</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div><!--終わり-->
+
+  <div class="space">
+  </div>
   
-  <script src="js/main.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12"></script>
-</body>
-</html>
+  <!-- work section -->
+  <div class="work-section fade-in" >
+    <div class="title-box">
+      <h2 class="title">Portfolio</h2>
+      <p class="sub-title">制作したアプリケーション</p>
+    </div>
+    <div class="content">
+      <a class="js-modal-open" href=""><img src="image/flaani.png" alt=""></a>
+      <h4 class="app-title">Flaani</h4>
+      <p class="app-sub-title">大切な人の記念日にお花が届くアプリケーション</p>
+    </div>
+    <div class="modal js-modal">
+      <div class="modal__bg js-modal-close"></div><!--背景クリックでも解除できる-->
+      <div class="modal__content">
+        <a href="http://54.248.183.192/"  target="_blank">
+          <img src="image/flaani.png" alt="">
+        </a>
+        <div class="app-int">
+          <h4 class="app-title">Flaani</h4>
+          <p class="app-sub-title">Ruby/Ruby on Railsを学習したアウトプットとして制作しました。</p>
+          <p class="app-sub-title">メモ：インフラ環境の学習成果としてAWSでEC2インスタンスの立ち上げやS3を使った保存領域の確保を行いました。</p>
+          <p class="app-sub-title">実装機能：複数のユーザー機能、大切な人登録機能、決済機能、メール通知機能</p>
+          <a href="https://github.com/hiro-sameshima/flaani" target="_blank"><i class="fab fa-github"></i></a>
+          <a href="https://docs.google.com/document/d/1cmyUodTgcbVHwBBDyNhAZNNVLwtXFf6jM-m8NVCFVtg/edit?usp=sharing" target="_blank">アプリケーション説明資料</a>
+          <a class="js-modal-close" href="">閉じる</a>
+
+        </div>
+      </div>
+    </div><!--modal-->
+
+  </div>
+
+  <!-- thanks  contact-->
+  <div class="contact-section">
+    <div class="title-box">
+      <h2 class="title">Thanks</h2>
+      <p class="sub-title">ご覧いただきありがとうございました。</p>
+    </div>
+    <div class="contents-box">
+
+      <div class="text-box">
+        <p>貴重な時間を頂戴しました。誠にありがとうございます。
+          <br>今後も随時学習のアウトプットとしてこちらに追加していきます。</p>
+          <a href="https://twitter.com/HiroSameshima"><i class="fab fa-twitter"></i></a>
+          <a href="https://qiita.com/Hiroaki_Sameshima">
+            <span class="fa-stack" style="color:#4cb10d">
+              <i class="fa fa-square fa-stack-2x"></i>
+              <i class="fa fa-search fa-stack-1x fa-inverse fa-2x"></i>
+            </span>
+          </a>
+        </div>
+
+    </div>
+  </div>
+
+  <!-- ヘッダー -->
+  <footer>
+    <div>
+©hiroaki sameshima 
+    </div>
+  </footer>
+  
+    
+    <script src="js/main.js"></script>
+    <script src="https://code.jquery.com/jquery-3.0.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12"></script>
+  </body>
+  </html>

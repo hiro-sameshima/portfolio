@@ -1,6 +1,6 @@
 body{
   background-color: #fff;
-  font-family: 'Lato', sans-serif;
+  font-family:  'Lato', sans-serif、Helvetica,'游ゴシック', 'Yu Gothic', YuGothic, HiraKakuProN-W3, 'メイリオ', Meiryo, sans-serif;
 }
 // ヘッダー部分
 .header {
@@ -18,29 +18,468 @@ body{
     img {
       width: 180px;
       height: 64px;
+      cursor: pointer;
+      transition: 0.4s;
+
+      &:hover{
+        transition: 0.7s;
+        opacity: 0.8;
+      }
     }
     i {
       margin: 0 16px;
       font-size: 24px;
       color: #333;
+      cursor: pointer;
+      transition: 0.4s;
+
+      &:hover{
+        transition: 0.7s;
+        opacity: 0.8;
+      }
     }
   }
-    .under-box {
-      width: 960px;
-      height: 110px;
+  .under-box {
+    width: 960px;
+    height: 110px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+
+    .menu-list {
+      list-style: none;
       display: flex;
       justify-content: flex-end;
-      align-items: flex-end;
+      
+      li {
+        font-size: 16px;
+        margin: 16px;
+        cursor: pointer;
+        transition: 0.4s;
 
-      .menu-list {
-        list-style: none;
-        display: flex;
-        justify-content: flex-end;
-        
-
-        li {
-          margin: 16px;
+        &:hover{
+          transition: 0.7s;
+          opacity: 0.4;
         }
       }
+    }
   }
+}
+ 
+//戻るボタン
+#page-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  font-size: 77%;
+  z-index: 100;
+}
+#page-top a {
+  background: #666;
+  text-decoration: none;
+  color: #fff;
+  width: 100px;
+  padding: 30px 0;
+  text-align: center;
+  display: block;
+  border-radius: 5px;
+}
+#page-top a:hover {
+  text-decoration: none;
+  background: #999;
+}
+
+// Top　section
+.top-section {
+  position: relative;
+  width: 100vw;
+  height: 480px;
+  background: -moz-radial-gradient(#ececec 50%, #f4f4f4 70%); 
+  background: -webkit-radial-gradient(#f4f8f0 20%,#f4f4f4 70%); 
+  background: radial-gradient(#f4f8f0 20%, #f4f4f4 70%); 
+  background-color:#f4f8f0;
+  text-align: center;
+
+  img {
+    width: 960px;
+    height: 480px;
+  }
+  .p {
+    opacity: 0;
+    position: absolute; 
+    left: 30%; 
+    top: 10%; 
+    font-size: 40px;
+    font-weight: 100;
+  }
+}
+
+//about section ふわっと表示される処理
+.about {
+  width: 960px;
+  height: 760px;
+  margin: 240px 332px;
+  .about-text {
+    .title {
+      font-size: 72px;
+      font-weight: 100;
+      text-align: center;
+      margin: 0 0 120px;
+    }
+    p {
+      font-size: 18px;
+    }
+  }
+  .introduction-box {
+    display: flex;
+    margin-top: 32px;
+  }
+  .introduction {
+    text-align: center;
+    padding: 0 16px;
+    .title {
+      font-size: 80px;
+      font-weight: 100;
+      margin-bottom: 16px;
+    }
+    h5 {
+      font-size: 28px;
+      margin-bottom: 16px;
+    }
+    p {
+      line-height: 32px;
+    }
+  }
+  .introduction-box {
+    .about-image {
+      img {
+        height: 500px;
+        width: 320px;
+      }
+    }
+  }
+}
+
+// 詳しいプロフィール
+.hiroaki-sameshima {
+  width: 100vw;
+  height: 100%;
+  background-color: lightblue;
+}
+.modal{
+  display: none;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+//プロフィールの詳細モーダルつけ外し
+.same-content{
+  margin: 0 auto;
+  padding: 40px;
+  width: 960px;
+  .btn {
+    margin-left: 32px;
+    text-decoration: none;
+    color: #fff;
+    background-color: #aaa;
+    border-radius: 8px;
+    padding: 16px 32px;
+  }
+}
+.same-modal{
+  display: none;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  .same-modal__bg{
+    background: rgba(0,0,0,0.5);
+    height: 100vh;
+    position: absolute;
+    width: 960px;
+  }
+  .same-modal__content{
+    background: #eee;
+    left: 50%;
+    padding: 40px;
+    position: absolute;
+    top: 45%;
+    left: 25.7%;
+    transform: translate(-45%,-45%);
+    width: 960px;
+  }
+  .box1 {
+    display: flex;
+    justify-content: center;
+  }
+  .app-int {
+    overflow: scroll;
+    height: 640px;
+    padding: 16px;
+  }
+  .app-title {
+    font-size: 40px;
+  }
+  .app-sub-title {
+    font-size: 24px;
+  }
+  img {
+    width: 300px;
+    height: 300px;
+  }
+}
+
+
+
+// フェードイン
+
+  .fade-in{
+      opacity: 0;
+      transform : translate(0, 50px);
+      transition : all 1200ms;
+  }
+  .scroll-in {
+    opacity: 1;
+    transform: translate(0, 0);
+  }
+  
+  .fade-side-in{
+    opacity: 0;
+    transform : translate(80px, 0);
+    transition : all 1200ms;
+  }
+  
+  // Skill-Section
+  .skill-section {
+    height: 960px;
+    margin: 0 320px;
+    background-color: #eee;
+    .title-box {
+      background-color: #fff;
+      margin-bottom: 80px;
+      .title {
+        font-size: 80px;
+        font-weight: 100;
+        text-align: center;
+      }
+      p {
+        text-align: center;
+      }
+    }
+    .sub-title {
+      font-size: 40px;
+      font-weight: 300;
+    }
+  }
+  
+  .scroll-side-in {
+    opacity: 1;
+    transform: translate(0, 0);
+  }
+  
+$red: #fd7473;
+$yellow: #fec951;
+$blue: #47b8e0;
+$green: #44bc84;
+$ruby: #ff6361;
+$MySQL: #FF9966;
+$Nginx: #009900;
+$AWS: #9057FF;
+
+
+.wrapper{
+  margin: 0 auto;
+  width: 90%;
+  margin-top: 15px;
+}
+
+.bar{
+  position: relative;
+  width: 100%;
+  height: 48px;
+  margin-bottom: 1.5rem;
+  border-radius: 5px;
+  .bar-info{
+    border-radius: 5px;
+    padding: 0.75rem;
+    background: $red;
+    color: white;
+    width: 10%;
+    position: relative;
+    height: 48px;
+    transition: width 3.3s ease-in-out;
+    .percent{
+      float: right;
+    }
+    &.html{
+      background: linear-gradient($red, #FC688E), $red;
+    }
+    &.scss{
+      background: linear-gradient($yellow, #FCAD44), $yellow;
+    }
+    &.js{
+      background: linear-gradient($blue, #28BEFA), $blue;
+    }
+    &.ps{
+      background: linear-gradient($green, #44bc84), $green;
+    }
+    &.ruby{
+      background: linear-gradient($ruby, #fc2c2a), $ruby;
+    }
+    &.MySQL{
+      background: linear-gradient($MySQL, #FF6600), $MySQL;
+    }
+    &.Nginx{
+      background: linear-gradient($Nginx, #339933), $Nginx;
+    }
+    &.AWS{
+      background: linear-gradient($AWS, #5507ff), $AWS;
+    }
+  }
+}
+
+* {margin: 0; padding: 0;}
+.about {position: relative; height: 100vh;  font-size: 16px;}
+
+.space {
+  width: 960px;
+  height: 320px;
+  background-color: #fff;
+}
+
+// work section
+
+.work-section {
+  width: 100vw;
+  height: 800px;
+  text-align: center;
+  margin:0 0 40px 0;
+  background-color: #eee;
+  .title-box {
+    background-color: #fff;
+  }
+  .title{
+    font-size: 80px;
+    font-weight: 100;
+  }
+  .sub-title {
+    font-size: 18px;
+  }
+  img {
+    width: 880px;
+    height: 500px;
+  }
+  .app-title {
+    font-size: 40px;
+    font-weight: 100;
+  }
+  .app-sub-title {
+    font-size: 20px;
+  }
+}//end .work-section
+.modal{
+  display: none;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+//モーダルつけ外し
+.content{
+  margin: 0 auto;
+  padding: 40px;
+}
+.modal{
+  display: none;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+.modal__bg{
+  background: rgba(0,0,0,0.5);
+  height: 100vh;
+  position: absolute;
+  width: 100%;
+}
+.modal__content{
+  background: #fff;
+  left: 50%;
+  padding: 40px;
+  position: absolute;
+  top: 45%;
+  transform: translate(-50%,-50%);
+  width: 960px;
+}
+
+.app-int {
+  p{
+    margin-bottom: 18px;
+  }
+  a{
+    margin-top: 16px;
+    background-color: darkgray;
+    text-decoration: none;
+    border-radius: 8px;
+    color: #fff;
+    width: 100px;
+    height: 32px;
+    margin: 8px;
+    padding: 16px 24px;
+  }
+  .fa-github {
+    font-size: 24px;
+  }
+}
+
+a:hover {
+  opacity: 0.9;
+  transition: 0.7s;
+}
+
+// contact
+.contact-section {
+  width: 960px;
+  height: 600px;
+  margin: 240px 320px 240px;
+  background-color: #eee;
+  text-align: center;
+  .title-box {
+    background-color: #fff;
+    .title{
+      font-size: 80px;
+      font-weight: 100;
+    }
+    .sub-title {
+      font-size: 22px;
+    }
+  }
+  .contents-box {
+    font-size: 18px;
+  }
+  .text-box {
+    margin-top: 180px;
+  }
+  .fa-twitter {
+    color: #00acee;
+    font-size: 32px;
+  }
+  .fa-stack {
+    font-size: 16px;
+  }
+
+ 
+}
+
+// フッター
+footer{
+  width: 100vw;
+  height: 160px;
+  margin-top: 320px;
+  background-color: #aaa;
+  text-align: center;
+  line-height: 160px;
 }
