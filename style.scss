@@ -443,7 +443,7 @@ a:hover {
 // contact
 .contact-section {
   width: 960px;
-  height: 600px;
+  height: 540px;
   margin: 240px 320px;
   background-color: #eee;
   text-align: center;
@@ -458,15 +458,15 @@ a:hover {
     }
   }
   .contents-box {
-    font-size: 24px;
+    font-size: 20px;
   }
   .text-box {
-    margin-top: 180px;
+    margin-top: 56px;
   }
   .icon-box {
     display: flex;
     flex-direction: column;
-    margin-top: 24px;
+    margin-top: 56px;
     .fa-twitter {
       color: #00acee;
       font-size: 62px;
