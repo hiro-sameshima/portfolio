@@ -19,20 +19,40 @@ $(function() {
   });
 });
 
-// ページ内移動処理
-$(".goSection").on("click", function() {
-
-  // クリックされた要素のhref属性の値を取得 例：#first
-  const scrollTarget = $(this)[0].attributes[1].nodeValue;
-
-  // 取得した値のid属性がついた要素の位置を取得
-  const offsetTop = $(scrollTarget).offset().top;
-
-  // 取得した箇所に移動
-  $("html, body").animate({ scrollTop: offsetTop }, 200);
-
-  return false;
+// 移動ボタン
+$(function() {
+  var aboutBtn = $('#about');    
+  aboutBtn.click(function () {
+    $('body,html').animate({
+      scrollTop: 960
+    }, 500);
+    return false;
+  });
 });
+
+// 移動ボタン
+$(function() {
+  var skillsBtn = $('#skills');    
+  skillsBtn.click(function () {
+    $('body,html').animate({
+      scrollTop: 2150
+    }, 500);
+    return false;
+  });
+});
+
+// 移動ボタン
+$(function() {
+  var portfolioBtn = $('#portfolio');    
+  portfolioBtn.click(function () {
+    $('body,html').animate({
+      scrollTop: 3360
+    }, 500);
+    return false;
+  });
+});
+
+
 
 // スクロールすると浮き上がる動的処理
 $(window).scroll(function() {

@@ -16,8 +16,8 @@ body{
     align-items: flex-end;
 
     img {
-      width: 180px;
-      height: 64px;
+      width: 116px;
+      height: 116px;
       cursor: pointer;
       transition: 0.4s;
 
@@ -116,9 +116,9 @@ body{
 
 //about section ふわっと表示される処理
 .about {
-  width: 960px;
+  width: 100vw;
   height: 760px;
-  margin: 240px 332px;
+  margin: 240px 0;
   .about-text {
     .title {
       font-size: 72px;
@@ -132,6 +132,7 @@ body{
   }
   .introduction-box {
     display: flex;
+    justify-content: center;
     margin-top: 32px;
   }
   .introduction {
@@ -198,7 +199,7 @@ body{
     background: rgba(0,0,0,0.5);
     height: 100vh;
     position: absolute;
-    width: 960px;
+    width: 100vw;
   }
   .same-modal__content{
     background: #eee;
@@ -206,8 +207,7 @@ body{
     padding: 40px;
     position: absolute;
     top: 45%;
-    left: 25.7%;
-    transform: translate(-45%,-45%);
+    transform: translate(-50%,-50%);
     width: 960px;
   }
   .box1 {
@@ -231,10 +231,7 @@ body{
   }
 }
 
-
-
 // フェードイン
-
   .fade-in{
       opacity: 0;
       transform : translate(0, 50px);
@@ -277,6 +274,9 @@ body{
   .scroll-side-in {
     opacity: 1;
     transform: translate(0, 0);
+    position: relative;
+    z-index: 1;
+
   }
   
 $red: #fd7473;
@@ -458,24 +458,33 @@ a:hover {
     }
   }
   .contents-box {
-    font-size: 18px;
+    font-size: 24px;
   }
   .text-box {
     margin-top: 180px;
   }
-  .fa-twitter {
-    color: #00acee;
-    font-size: 32px;
+  .icon-box {
+    display: flex;
+    flex-direction: column;
+    margin-top: 24px;
+    .fa-twitter {
+      color: #00acee;
+      font-size: 62px;
+      margin-bottom: 8px;
+    }
+    a {
+      text-decoration: none;
+      color: #333;
+      font-size: 20px;
+    }
+    .fa-stack {
+      font-size: 30px;
+    }
   }
-  .fa-stack {
-    font-size: 16px;
-  }
-
- 
 }
 
 // フッター
-footer{
+footer {
   width: 100vw;
   height: 160px;
   margin-top: 320px;
