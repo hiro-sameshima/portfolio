@@ -1,3 +1,34 @@
+// トップページ表示処理
+$(function(){
+  $("p").children().addBack().contents().each(function(){
+    if (this.nodeType == 3) {
+      var $this = $(this);
+      $this.replaceWith($this.text().replace(/(\S)/g, "<span>$&</span>"));
+    }
+  });
+
+  var delaySpeed = 1000; // 1秒ずつ遅らせる
+  var fadeSpeed = 2000; // 1秒かける
+
+  $(window).on('load', function() {
+    $('.p').each(function(i){
+      $(this).delay(i*(delaySpeed)).animate({
+        'opacity' : '1'
+      },fadeSpeed);
+      $('.p').animate({
+        marginTop:'80px',
+        fontSize: '50px'
+      });
+      $('#p2').animate({
+        marginTop:'160px'
+      });
+      $('#p3').animate({
+        marginTop:'240px'
+      });
+    });
+  });
+});
+
 // トップページ移動ボタン
 $(function() {
   var topBtn = $('#page-top');    
@@ -10,7 +41,7 @@ $(function() {
           topBtn.fadeOut();
       }
   });
-  //スクロールしてトップ
+  //スクロールしてトップへ移動
   topBtn.click(function () {
       $('body,html').animate({
           scrollTop: 0
@@ -19,7 +50,8 @@ $(function() {
   });
 });
 
-// 移動ボタン
+
+// スクロール処理①
 $(function() {
   var aboutBtn = $('#about');    
   aboutBtn.click(function () {
@@ -30,7 +62,7 @@ $(function() {
   });
 });
 
-// 移動ボタン
+// スクロール処理②
 $(function() {
   var skillsBtn = $('#skills');    
   skillsBtn.click(function () {
@@ -41,7 +73,7 @@ $(function() {
   });
 });
 
-// 移動ボタン
+// スクロール処理③
 $(function() {
   var portfolioBtn = $('#portfolio');    
   portfolioBtn.click(function () {
@@ -54,7 +86,7 @@ $(function() {
 
 
 
-// スクロールすると浮き上がる動的処理
+// 表示処理①
 $(window).scroll(function() {
   $('.fade-in').each(function() {
     var elemPos = $(this).offset().top,
@@ -67,7 +99,7 @@ $(window).scroll(function() {
   })
 })
 
-// スクロールすると浮き上がる動的処理
+// 表示処理②
 $(window).scroll(function() {
   $('.fade-side-in').each(function() {
     var elemPos = $(this).offset().top,
@@ -79,8 +111,9 @@ $(window).scroll(function() {
     }
   })
 })
-var ad = true 
-// スクロールすると浮き上がる動的処理
+var ad = true
+
+// 表示処理③
 $(window).scroll(function() {
   $('.fade-side-in').each(function() {
     var elemPos = $(this).offset().top,
@@ -133,10 +166,10 @@ var skillMater = function(){ $(document).ready(function() {
 }); 
 }
 
-    
+// フォントサイズ変更処理
 $('#box').animate({fontSize: 80},3000,'swing');
 
-// 上記モーダル
+// About部分モーダル
 $(function(){
   $('.same-js-modal-open').on('click',function(){
     $('.same-js-modal').fadeIn();
@@ -158,7 +191,8 @@ $(function(){
       return false;
     });
 });
-// 下記モーダル
+
+// ポートフォリオ部分モーダル処理
 $(function(){
   $('.js-modal-open').on('click',function(){
     $('.js-modal').fadeIn();
@@ -181,36 +215,3 @@ $(function(){
     });
 });
 
-$(function(){
-
-  $("p").children().addBack().contents().each(function(){
-    if (this.nodeType == 3) {
-      var $this = $(this);
-      $this.replaceWith($this.text().replace(/(\S)/g, "<span>$&</span>"));
-    }
-  });
-
-  var delaySpeed = 1000; // 1秒ずつ遅らせる
-  var fadeSpeed = 2000; // 1秒かける
-
-  $(window).on('load', function() {
-
-    $('.p').each(function(i){
-      $(this).delay(i*(delaySpeed)).animate({
-        'opacity' : '1'
-      },fadeSpeed);
-      $('.p').animate({
-        marginTop:'80px',//margin-leftをキャメルケースで書く
-        fontSize: '50px'
-      });
-      $('#p2').animate({
-        marginTop:'160px'//margin-leftをキャメルケースで書く
-      });
-      $('#p3').animate({
-        marginTop:'240px'//margin-leftをキャメルケースで書く
-      });
-    });
-
-
-  });
-});
