@@ -119,10 +119,11 @@ $(window).scroll(function() {
     var elemPos = $(this).offset().top,
     scroll = $(window).scrollTop(),
     windowHeight = $(window).height(),
-    startPosition = 800;
+    startPosition = 780;
     if (scroll > elemPos - windowHeight + startPosition) {
       $(this).addClass('scroll-in')
-      return skillMater();
+       skillMater();
+       $(window).off('.noScroll');
     }
   })
 })
