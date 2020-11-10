@@ -5,9 +5,9 @@ body {
 }
 
 .header {
-  width: 960px;
+  width: 100vw;
   height: 270px;
-  margin: 0 332px;
+  margin: 0 330px;
 }
 
 .header .box {
@@ -225,6 +225,7 @@ body {
   position: fixed;
   top: 0;
   width: 100%;
+  z-index: 300;
 }
 
 .same-modal .same-modal__bg {
@@ -517,10 +518,9 @@ a:hover {
 }
 
 .contact-section {
-  width: 960px;
+  width: 100vw;
   height: 540px;
-  margin: 240px 320px;
-  background-color: #eee;
+  margin: 240px 0;
   text-align: center;
 }
 
