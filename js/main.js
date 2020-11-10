@@ -15,15 +15,13 @@ $(function(){
       $(this).delay(i*(delaySpeed)).animate({
         'opacity' : '1'
       },fadeSpeed);
-      $('.p').animate({
-        marginTop:'80px',
-        fontSize: '50px'
+      $('#p1').animate({
       });
       $('#p2').animate({
-        marginTop:'160px'
+        marginTop:'50px'
       });
       $('#p3').animate({
-        marginTop:'240px'
+        marginTop:'100px'
       });
     });
   });
